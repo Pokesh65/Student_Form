@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("./backgroundpic.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.box{
+    width: 900px;
+    height: 500px;
+    border: 2px solid #625d5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: transparent;
+    background-image: url(./star.gif);
+    color: transparent;
+    background-clip: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 40px black);
+    border: none;
+
+
+}
+.box:hover{
+    filter: drop-shadow(5px 5px 40px rgb(255, 255, 255));
+    border: 2px solid #625d5d;
+
+}
+h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+
+}
+.inputbox{
+    position: relative;
+    margin-left: -250px;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+
+}
+.inputbox1{
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 0px;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+} 
+.inputbox1 label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+input:focus ~label{
+    top: -5px;
+}
+input:focus ~label{
+    top: -5px;
+
+}
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #000;
+}
+.inputbox1 input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #000;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+    
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+
+
+}
+.inputbox1 ion-icon{
+    position: absolute;
+    top: 20px;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+   
+}
+    
+.inputrow{
+    display: flex;
+    padding: 22px 60px 30px 95px;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #e6e2e2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.Btn-div{
+    display: flex;
+    width: 35vw;
+    margin-top: 20px;
+}
+.Btn1{
+    margin: 0px 40px 0px 0px;
+}
+.Btn2{
+    margin:0px 0px 0px -8px;
+}
+
+table,th,td{
+    border-left: 1px solid #003598;
+    border-right:1px solid #003598;
+    border-top:1px solid #008e98;
+    border-bottom:1px solid #008e98;
+    padding: 12px 12px;
+}
+tbody>tr{
+    border-bottom: 1px solid #181616;
+}
+tbody>tr:last-of-type{
+    border-bottom: 5px solid #008e98;
+}
+thead>tr{
+   font-size: 20px;
+   background-color: #008e98;
+   color: white;
+   font-weight: bold;
+}
+tr:hover{
+    background-color: rgb(145, 145, 236);
+    color: white;
+}
+table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    background: linear-gradient(pink,white,rgb(145, 145, 236));
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    font-size: 0.9em;
+    min-width:400px;
+    box-shadow: 0 0 20px black;
+}
+
+p{
+    
+    display: flex;
+    align-items: center;
+}
+
+.Rbtn{
+    margin-top: 10px;
+    left: 304px;
+    bottom: 1px;
+    background-color: blueviolet;
+    color: white;
+}
+.R_Heading{
+    color:white;
+    text-shadow:2px 2px 5px rgb(103, 42, 156) ;
+    margin-top: 10px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.612), rgb(84, 21, 161));
+    border-radius: 30px;
+   
+}
