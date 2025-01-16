@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Result from './Result';
+import Update from './Update';
 
 
 const router = createBrowserRouter([
@@ -17,9 +18,13 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "result",
+    path: "/result",
     element:<Result/>
   },
+  {
+    path: "/update/:ID",
+    element:<Update/>
+  }
 ]);
 
 

@@ -1,0 +1,93 @@
+package com.besant.Springlearn.service;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.besant.Springlearn.entity.StudentDtls;
+import com.besant.Springlearn.repository.StudRepository;
+
+@Service
+public class StudService {
+//	we need to tell to service you will get data from the controller where they get that from frontend 
+//	so we will let service know that name has StudentDtls data type you will get data
+//	so here we will do whatever database or whatever
+//	Here we can declare same name from the controller or different name
+
+	
+//	these autowired will link these bean to our service 
+	
+	@Autowired
+	private StudRepository Studrepo;
+//	variable dataType      created variable
+	
+	public String SetDetails1(StudentDtls sdt) {
+		Studrepo.save(sdt);
+		return "Datas Entered";
+		
+	}
+	public List<StudentDtls> getStudent(){
+		return Studrepo.findAll();
+	}
+	
+	public String Delvalue(int id) {
+		Studrepo.deleteById(id);
+		return "Deleted";
+	}
+	
+	public List<StudentDtls> getSpecificdata(int id){
+		
+		Optional<StudentDtls> oneDt=Studrepo.findById(id);
+		
+		if(oneDt.isPresent()){
+			
+			return oneDt.get();
+			
+		}else {
+			
+			return null;
+			
+		}
+		
+	}
+	
+	public String UpdateDate(StudentDtls SD){
+		
+		Optional<StudentDtls> SData=Studrepo.findById(SD.getStud_id());
+		
+		
+		if(SData.isPresent()) {
+			StudentDtls newSdata=SData.get();
+			if(!SD.getF_Name().isBlank()) {
+				newSdata.setF_Name(SD.getF_Name());
+			}
+			
+			if(!SD.getS_name().isBlank()) {
+				newSdata.setS_name(SD.getS_name());
+			}
+			
+			if(!SD.getMail_id().isBlank()) {
+				newSdata.setMail_id(SD.getMail_id());
+			}
+			
+			if(!SD.getPhone_no().isBlank()) {
+				newSdata.setPhone_no(SD.getPhone_no());
+			}
+			
+			if(!SD.getCourse_name().isBlank()) {
+				newSdata.setCourse_name(SD.getCourse_name());
+			}
+			Studrepo.save(newSdata);
+		}
+		else {
+			return "These values is not here";
+		}
+			
+		return "Data is Updated";
+		
+		
+	}
+}

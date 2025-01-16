@@ -43,57 +43,53 @@ return(
               <div class="inputrow">
                   <div class="inputbox">
                   <ion-icon name="person-outline"></ion-icon>
-                      <input type="text" name='Fname' id="Fname" onChange={(e)=>ChangeValue(e)} required/>
+                      <input type="text" name='Fname' id="Fname" placeholder=" " onChange={(e)=>ChangeValue(e)} required/>
                       <label for="">First  Name:</label>
-                      
+    
                   </div>
                   <div class="inputbox1">
                       <ion-icon name="people-outline"></ion-icon>
-                      <input type="text" name='Sname' id="Sname" onChange={(e)=>ChangeValue(e)} required/>
+                      <input type="text" name='Sname' id="Sname" placeholder=" " onChange={(e)=>ChangeValue(e)} required/>
                       <label for="">Second Name:</label>
                   </div>
               </div>
               <div class="inputrow">
                   <div class="inputbox">
                       <ion-icon name="mail-unread-outline"></ion-icon>
-                      <input type="email" name='Mid' id="Mid" onChange={(e)=>ChangeValue(e)} required/>
+                      <input type="email" name='Mid' id="Mid" placeholder=" " onChange={(e)=>ChangeValue(e)} required/>
                       <label for="">Email:</label>
                       
                   </div>
                   <div class="inputbox1">
                       <ion-icon name="call-outline"></ion-icon>
-                      <input type="number" name='Pno' id="Pno" onChange={(e)=>ChangeValue(e)} required/>
+                      <input type="number" name='Pno' id="Pno" placeholder=" " onChange={(e)=>ChangeValue(e)} required/>
                       <label for="">Contact No:</label>
                   </div>
               </div>
               <div class="inputrow">
                   <div class="inputbox">
                       <ion-icon name="school-outline"></ion-icon>
-                      <input type="text" name='Cname' id="Cname" onChange={(e)=>ChangeValue(e)} required/>
+                      <input type="text" name='Cname' id="Cname" placeholder=" " onChange={(e)=>ChangeValue(e)} required/>
                       <label for="">Course Name:</label>
                       
                   </div>
                   <div class="inputbox1">
                       <ion-icon name="server-outline"></ion-icon>
-                      <input type="number" name='Rno' id="Rno" onChange={(e)=>ChangeValue(e)} required/>
+                      <input type="number" name='Rno' id="Rno" placeholder=" "  onChange={(e)=>ChangeValue(e)} required/>
                       <label for="">Register No:</label>
                   </div>
               </div>
              <div class="Btn-div">
-                  <button class="Btn1"onClick={()=>SendDatas()}>Submit</button>
-                  <button class="Btn2"onClick={()=>sendResult()}>Result</button>
+                  <button class="Btn1 button-Home" onClick={()=>SendDatas()}>Submit</button>
+                  <button class="Btn2 button-Home" onClick={()=>sendResult()}>Result</button>
                   
              </div>
 
           </form>
 
        </div>
-     
-        
     
-    
-    
-  </div>
+    </div>
 
     )
 }

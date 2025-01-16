@@ -1,10 +1,14 @@
-*{
+* {
     margin: 0;
-    padding: 0;
-    font-family: "poppins",sans-serif;
+    padding: 108;
+    font-family: "poppins", sans-serif;
+    animation: univers 5s;
+    animation-timing-function: linear;
+    box-sizing: border-box;
 }
 
-body{
+
+body {
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -16,7 +20,8 @@ body{
     background-size: cover;
     width: 100%;
 }
-.box{
+
+.box {
     width: 900px;
     height: 500px;
     border: 2px solid #625d5d;
@@ -36,59 +41,72 @@ body{
 
 
 }
-.box:hover{
+
+.box:hover {
     filter: drop-shadow(5px 5px 40px rgb(255, 255, 255));
     border: 2px solid #625d5d;
 
 }
-h2{
+
+h2 {
     font-size: 2em;
     color: white;
     text-align: center;
 
 }
-.inputbox{
+
+.inputbox {
     position: relative;
     margin-left: -250px;
     width: 300px;
     border-bottom: 2px solid #fff;
 
 }
-.inputbox1{
+
+.inputbox1 {
     position: absolute;
     margin-left: 180px;
     margin-top: 0px;
     width: 300px;
     border-bottom: 2px solid #fff;
 }
-.inputbox label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 1em;
-    pointer-events: none;
-    transition: 0.5s;
-} 
-.inputbox1 label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 1em;
-    pointer-events: none;
-    transition: 0.5s;
-}
-input:focus ~label{
-    top: -5px;
-}
-input:focus ~label{
-    top: -5px;
 
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
 }
-.inputbox input{
+
+.inputbox1 label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:not(:placeholder-shown)+label,
+.inputbox1 input:focus~label,
+.inputbox1 input:not(:placeholder-shown)+label {
+    top: -5px;
+}
+
+.inputbox1 input:focus~label {
+    top: -5px;
+}
+
+
+
+.inputbox input {
     width: 100%;
     height: 50px;
     background: transparent;
@@ -98,7 +116,8 @@ input:focus ~label{
     padding: 0 35px 0 5px;
     color: #000;
 }
-.inputbox1 input{
+
+.inputbox1 input {
     width: 100%;
     height: 50px;
     background: transparent;
@@ -108,13 +127,14 @@ input:focus ~label{
     padding: 0 35px 0 5px;
     color: #000;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 1px;
 }
-    
-.inputbox ion-icon{
+
+.inputbox ion-icon {
     position: absolute;
     right: 8px;
     color: #fff;
@@ -123,95 +143,425 @@ input::-webkit-inner-spin-button {
 
 
 }
-.inputbox1 ion-icon{
+
+.inputbox1 ion-icon {
     position: absolute;
     top: 20px;
     right: 8px;
     color: #fff;
     font-size: 1.2em;
-   
+
 }
-    
-.inputrow{
+
+.inputrow {
     display: flex;
     padding: 22px 60px 30px 95px;
 }
-button{
+
+.button-Home {
     width: 100%;
     height: 40px;
     border-radius: 40px;
-    background-color: #e6e2e2;
+    background: #4DE4FD;
+    background: linear-gradient(225deg, #4DE4FD, #FF9DBC);
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1.3em;
     font-weight: 700;
+    transition: all 0.5s;
 }
 
-.Btn-div{
+.button-Home:hover {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background: #4DE4FD;
+    background: conic-gradient(from 315deg, #4DE4FD, #FF9DBC);
+}
+
+.Btn-div {
     display: flex;
     width: 35vw;
     margin-top: 20px;
 }
-.Btn1{
+
+.Btn1 {
     margin: 0px 40px 0px 0px;
 }
-.Btn2{
-    margin:0px 0px 0px -8px;
+
+.Btn2 {
+    margin: 0px 0px 0px -8px;
 }
 
-table,th,td{
+table,
+th,
+td {
     border-left: 1px solid #003598;
-    border-right:1px solid #003598;
-    border-top:1px solid #008e98;
-    border-bottom:1px solid #008e98;
+    border-right: 1px solid #003598;
+    border-top: 1px solid #008e98;
+    border-bottom: 1px solid #008e98;
     padding: 12px 12px;
 }
-tbody>tr{
+
+tbody>tr {
     border-bottom: 1px solid #181616;
 }
-tbody>tr:last-of-type{
+
+tbody>tr:last-of-type {
     border-bottom: 5px solid #008e98;
 }
-thead>tr{
-   font-size: 20px;
-   background-color: #008e98;
-   color: white;
-   font-weight: bold;
+
+thead>tr {
+    font-size: 20px;
+    background-color: #008e98;
+    color: white;
+    font-weight: bold;
 }
-tr:hover{
+
+tr:hover {
     background-color: rgb(145, 145, 236);
     color: white;
 }
-table{
+
+table {
     margin-top: 10px;
     border-collapse: collapse;
-    background: linear-gradient(pink,white,rgb(145, 145, 236));
+    background: linear-gradient(pink, white, rgb(145, 145, 236));
     border-radius: 10px 10px 0 0;
     overflow: hidden;
     font-size: 0.9em;
-    min-width:400px;
+    min-width: 400px;
     box-shadow: 0 0 20px black;
 }
 
-p{
-    
+p {
+
     display: flex;
     align-items: center;
 }
 
-.Rbtn{
+.Rbtn {
     margin-top: 10px;
     left: 304px;
     bottom: 1px;
     background-color: blueviolet;
     color: white;
 }
-.R_Heading{
-    color:white;
-    text-shadow:2px 2px 5px rgb(103, 42, 156) ;
+
+.R_Heading {
+    color: white;
+    text-shadow: 2px 2px 5px rgb(103, 42, 156);
     margin-top: 10px;
     background-image: linear-gradient(to right, rgba(255, 0, 0, 0.612), rgb(84, 21, 161));
     border-radius: 30px;
-   
 }
+
+.UDDiv {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.Delbtn {
+    font-size: small;
+    width: 8vw;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+
+.updbtn {
+    font-size: small;
+    width: 8vw;
+    border-radius: 5px;
+}
+
+.table-button {
+    place-content: center;
+    width: 50vw;
+    display: flex;
+    position: relative;
+    top: 20px;
+    justify-content: space-around;
+}
+
+.lastBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #008e98 0%, #5ab0b6 80%, #11b1bd 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px gray;
+}
+
+.lastBtn:hover {
+    box-shadow: 0 4px 3px 1px #5ab0b6, 0 6px 8px #11b1bd, 0 -4px 4px #008e98, 0 -6px 4px #00828b, inset 0 0 3px 3px #6de7f0;
+}
+
+.lastBtn:active {
+    box-shadow: 0 4px 3px 1px #008b74, 0 6px 8px #04a68b, 0 -4px 4px #09ac91, 0 -6px 4px #22dbbc, inset 0 0 5px 3px blue, inset 0 0 30px black;
+}
+
+.lastBtn:focus {
+    box-shadow: 0 4px 3px 1px #5ab0b6, 0 6px 8px #11b1bd, 0 -4px 4px #008e98, 0 -6px 4px #00828b, inset 0 0 3px 3px #6de7f0;
+}
+
+.lstInp {
+    max-width: 190px;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+}
+
+.lstInp:not(:placeholder-shown) {
+    animation: rotateShadow 2s infinite linear;
+}
+
+@keyframes rotateShadow {
+    0% {
+        box-shadow: -2px -2px 0px 0px #aa00ff, 2px 2px 0px 0px #3700ff;
+    }
+
+    25% {
+        box-shadow: -2px 2px 0px 0px #aa00ff, 2px -2px 0px 0px #3700ff;
+    }
+
+    50% {
+        box-shadow: 2px 2px 0px 0px #aa00ff, -2px -2px 0px 0px #3700ff;
+    }
+
+    75% {
+        box-shadow: 2px -2px 0px 0px #aa00ff, -2px 2px 0px 0px #3700ff;
+    }
+
+    100% {
+        box-shadow: -2px -2px 0px 0px #aa00ff, 2px 2px 0px 0px #3700ff;
+    }
+}
+
+.Container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    row-gap: 30px;
+}
+
+.labeltag {
+    margin-bottom: 10px;
+    color: black;
+    text-shadow: -0.5px 1.5px 0px aqua;
+    /* -webkit-text-stroke: 0.1px black; */
+}
+
+/* Button On Result*/
+/* From Uiverse.io by elijahgummer */
+.button-with-icon {
+    overflow: hidden;
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0f988e;
+    font-family: "Istok Web", sans-serif;
+    letter-spacing: 1px;
+    padding: 0 12px;
+    text-align: center;
+    width: 25rem;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 3px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(0px);
+    position: relative;
+    box-shadow:
+        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 20px rgba(0, 0, 0, 0),
+        0 3px 0 #0f988e,
+        0 3px 2px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #15ccbe;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
+}
+
+.button-with-icon .icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-with-icon:active {
+    transform: translateY(3px);
+    box-shadow:
+        inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 0 1px 20px rgba(0, 0, 0, 0.1),
+        0 0 0 #0f988e,
+        0 0 0 2px rgba(255, 255, 255, 0.5),
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0);
+}
+
+.button-with-icon:hover .text {
+    transform: translateY(200px);
+}
+
+.button-with-icon:hover .icon {
+    transform: translate(23px);
+}
+
+.text {
+    transition: all 0.8s ease-in-out;
+}
+
+/* Result page */
+/* Delete Button  */
+.button {
+    margin: 7px 15px 0px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #6F4AEE;
+    background: radial-gradient(at center, #6F4AEE, #030244);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    gap: 2px;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    transition-duration: 0.3s;
+    background: #EE4D4A;
+    background: radial-gradient(at center, #EE4D4A, #440202);
+    align-items: center;
+    gap: 0;
+}
+
+.bin-top {
+    transform-origin: bottom right;
+}
+
+.button:hover .bin-top {
+    transition-duration: 0.5s;
+    transform: rotate(160deg);
+}
+
+/* Update pages */
+.Update-main-div {
+    box-sizing: border-box;
+    padding-top: 23px;
+    border-radius: 10px;
+    background: linear-gradient(225deg, #4DE4FD, #FF9DBC);
+    -webkit-backdrop-filter: blur(100px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 1s;
+
+}
+.Update-main-div:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 13px 10px, rgba(0, 0, 0, 0.3) 0px 0px 20px 30px, rgba(0, 0, 0, 0.2) 0px 0px 3px 8px inset;
+}
+
+/* Result Page */
+/* Update Button */
+/* From Uiverse.io by vinodjangid07 */
+.button1 {
+    margin: 7px 15px 0px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #6F4AEE;
+    background: radial-gradient(at center, #6F4AEE, #030244);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button1:hover {
+    width: 5rem;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background: #89EE4A;
+    background: radial-gradient(at center, #89EE4A, #024437);
+    align-items: center;
+}
+
+.button1:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.button1::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Update";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+
+.button1:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
+
+/* Update bg */
+/* From Uiverse.io by ElSombrero2 */
