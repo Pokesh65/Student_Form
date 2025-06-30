@@ -23,19 +23,19 @@ const Result = () => {
 
   useEffect(() => {
     GetDatas()
-  },[Res])
+  },[])
 
   async function Remove(i) {
 
     const data = await axios.delete(`http://localhost:8080/Form/Remove/${i}`)
-    // .then(() => {
-    //   window.location.reload();
-    // })
-    console.log(data);
-     let filteredd=Res.filter((e,d)=>{
-      return d!==i 
-     })
-    SetRes(filteredd)
+    .then(() => {
+      window.location.reload();
+    })
+    // console.log(data);
+    //  let filteredd=Res.filter((e,d)=>{
+    //   return d!==i 
+    //  })
+    // SetRes(filteredd)
 
 
 
